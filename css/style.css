@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.gridContainer {
+    display: grid;
+    background-color: #eeeeee;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 210px;
+    gap: 0px 0px;
+    grid-template-areas: "header "
+        "main "
+        "footer ";
+}
+
+header {
+    grid-area: header;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.911);
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+header h1 {
+    color: rgba(245, 245, 245, 0.925);
+    font-size: xx-small;
+}
+
+header .logo {
+    height: 350px;
+    width: 450px;
+}
+
+
+.imc {
+    background-color: #f3c9b4;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imc h1 {
+    text-align: center;
+    color: rgb(17, 17, 17);
+    font-family: 'Noto Sans Avestan', sans-serif;
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.imc h2 {
+    text-align: center;
+    color: rgb(17, 17, 17);
+    font-family: 'Noto Sans Avestan', sans-serif;
+    font-size: 25px
+}
+
+
+
+.imc .imcCalculo {
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Avestan', sans-serif;
+    height: 450px;
+    width: 450px;
+    background-color: rgba(0, 23, 85, 0.281);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+    box-shadow: 10px 11px 14px 0px rgba(0, 0, 0, 0.62);
+    -webkit-box-shadow: 10px 11px 14px 0px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 10px 11px 14px 0px rgba(0, 0, 0, 0.62);
+
+
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+
+textarea {
+    min-height: 150px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton {
+    background-color: rgb(60, 137, 209);
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+
+}
+
+#boton:hover {
+    cursor: pointer;
+}
+
+.mainC .formulario div {
+    padding: 5px;
+    height: 50px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #c6e8e8;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 35px;
+}
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer div a {
+    padding: 5px;
+    text-decoration: none;
+    color: #4b4a4a;
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer p {
+    color: #4b4a4a;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
