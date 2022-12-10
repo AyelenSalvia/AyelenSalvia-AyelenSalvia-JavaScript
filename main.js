@@ -38,3 +38,46 @@ if (imc <= 18.5){
 }else if (imc >= 40 ) {
     alert(` Peso ${peso} kg, altura ${altura} m, su IMC es igual a ${resultado}= Obesidad grado 3`);
 }
+
+//AGREGAR ALUMNOS
+class Alumno {
+    constructor(nombreApellido , imc, horasSueno,tiempoActFisica){
+        this.nombre= nombreApellido;
+        this.imc=imc;
+        this.horasSueno=horasSueno;
+        this.tiempoActFisica=tiempoActFisica;
+    }
+}
+
+
+const listaAlumnos =[
+    {nombre: `Ana María`, imc: 30, horasSueno:8, tiempoActFisica: 1},
+    {nombre: `Uriel`, imc: 23, horasSueno:7, tiempoActFisica: 3},
+    {nombre: `Nahuel`, imc: 21.5, horasSueno:8, tiempoActFisica: 2},
+    {nombre: `Alexis`, imc: 31, horasSueno:6, tiempoActFisica: 2},
+    {nombre: `Dario`, imc: 24, horasSueno:8, tiempoActFisica: 4},
+    {nombre: `Liliana`, imc: 22, horasSueno:7, tiempoActFisica: 1},
+    {nombre: `Cecilia`, imc: 32, horasSueno:8, tiempoActFisica: 2},
+    {nombre: `Jacinto`, imc: 23.5, horasSueno:6, tiempoActFisica: 3},
+    
+    
+];
+
+const agregarAlumnos=()=> {
+    let nombre= prompt("Ingresa tu Nombre y apellido");
+    let imc = parseFloat(prompt("Cuál es tu IMC actual?"));
+    let horasSueno = parseFloat(prompt("Cuántas horas dormis generalmente?"));
+    let tiempoActFisica=parseFloat(prompt("Cuántas horas de actividad física haces habitualmente por día?"));
+
+    let alumnoNuevo = new Alumno (nombre, imc, horasSueno, tiempoActFisica)
+
+
+listaAlumnos.push (alumnoNuevo);
+return listaAlumnos;
+}
+
+//FILTRAR ALUMNOS CON SOBREPESO SEGUN IMC
+
+console.log(listaAlumnos.filter(alumno => alumno.imc >=30 && imc < 35
+));
+
