@@ -14,6 +14,8 @@
         "footer ";
 }
 
+
+
 header {
     grid-area: header;
 }
@@ -33,10 +35,11 @@ header h1 {
 header .logo {
     height: 350px;
     width: 450px;
+
 }
 
 
-.imc {
+.form {
     background-color: #f3c9b4;
     min-width: 600px;
     display: flex;
@@ -44,7 +47,7 @@ header .logo {
     align-items: center;
 }
 
-.imc h1 {
+.form h1 {
     text-align: center;
     color: rgb(17, 17, 17);
     font-family: 'Noto Sans Avestan', sans-serif;
@@ -53,7 +56,7 @@ header .logo {
     padding-top: 20px;
 }
 
-.imc h2 {
+.form h2 {
     text-align: center;
     color: rgb(17, 17, 17);
     font-family: 'Noto Sans Avestan', sans-serif;
@@ -62,13 +65,13 @@ header .logo {
 
 
 
-.imc .imcCalculo {
+/* .form .crearUsuario .login {
     margin-bottom: 20px;
     font-family: 'Noto Sans Avestan', sans-serif;
     height: 450px;
     width: 450px;
     background-color: rgba(0, 23, 85, 0.281);
-    padding: 10px 20px;
+    padding: 10px 20px; 
     box-sizing: border-box;
     margin-top: 20px;
     border-radius: 7px;
@@ -77,7 +80,7 @@ header .logo {
     -moz-box-shadow: 10px 11px 14px 0px rgba(0, 0, 0, 0.62);
 
 
-}
+} */
 
 input,
 textarea {
@@ -88,17 +91,15 @@ textarea {
     font-size: 17px;
 }
 
-textarea {
-    min-height: 150px;
-    max-height: 200px;
-    max-width: 100%;
-}
 
-#boton {
+
+#btn, #botonGuardar {
     background-color: rgb(60, 137, 209);
     color: #ffffff;
     padding: 10px;
     border: none;
+    display: flex;
+    
 
 }
 
@@ -120,7 +121,7 @@ textarea {
 }
 
 .footer div {
-    display: flex;
+    
     flex-direction: column;
 }
 
@@ -135,4 +136,35 @@ textarea {
     color: #4b4a4a;
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
+}
+
+.alumnos h3 {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+}
+.alumno {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.respuesta  {
+    text-align: center;
+    color: rgb(17, 17, 17);
+    font-family: 'Noto Sans Avestan', sans-serif;
+    font-size: 17px;
+    background-color: #ee8d5d98;
+    padding: 5px;
+
+}
+.resultado{
+    text-align: center;
+    color: rgb(17, 17, 17);
+    font-family: 'Noto Sans Avestan', sans-serif;
+    font-size: 17px;
+    background-color: #ee8d5d98;
+    padding: 5px;
+
 }

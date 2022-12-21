@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./img/favicon 1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon 1.ico" type="image/x-icon">
     
         <meta name="description" content="Entrenamiento Funcional, Pilates, Stretching.Clases personalizadas o grupales. Online y Outdoor">
         <meta name="keywords" content="entrenamiento, entrenamiento funcional, fit, fitness, piernas, gluteos, abdomen, stretching, sixpack, pilates, salud, bienestar ">
@@ -15,48 +15,34 @@
         <meta property="og:description" content="Entrenamiento Funcional, Pilates, Stretching.Clases personalizadas o grupales. Online y Outdoor">
         <meta property="og:url" content="https://vitalityfitness.netlify.app/">
         <meta property="og:image" content="https://vitalityfitness.netlify.app/img/vf.jpg">
-    <title>LOGIN</title>
+    <title>Calculadora IMC</title>
 </head>
 <body>
     <header>
-
         
-                
-    
-        <img class="logo" src="./img/vf.jpg">
-    
-
-    
+    <img class="logo" src="../img/vf.jpg">
 </header>
     <main class="main">
         <section class="form">
-            <h1>Bienvenidos  a vitalityfitness</h1>
+            <h1>Calculá tu Indice de Masa Corporal </h1>
+            <h2>Ingresá tus datos</h2>
             
             <section>
-        <div class="crearUsuario">
-            <h2>Creá tu ususario</h2>
-        <form id="CrearUsuario">
+        <div class="formIngreso">
+        <form id="imcForm">
         
             
-            <input type="text" id="usuarioNuevo" placeholder="Crea tu usuario"/>
-            <input type="number" id="contrasenaNueva" placeholder="Crea tu contraseña"/>
-            
+            <input type="number" id="peso" placeholder="Ingresa tu peso kg"/>
+            <input type="number" id="altura" placeholder="Ingresa tu altura cm"/>
+            <input type="button" value="Calcular" onclick="calcularImc()">
         </form>
+        </div>
+
+        <div class="resultado" id ="resultadoImc">
             
         </div>
 
-        <div class="login">
-            <h2>Ingresá tu usuario</h2>
-        <form id="login">
         
-            
-            <input type="text" id="usuario" placeholder="Ingresa tu usuario"/>
-            <input type="number" id="contrasena" placeholder="Ingresa tu contraseña"/>
-            <input type="button" value="Ingresar" onclick="loguear()">
-        </form>
-        </div>
-        <div class="respuesta" id="respuesta"></div>
-
         
     </section>
             
@@ -65,18 +51,18 @@
     </main>
     <footer class="footer">
         <div>
-            <a href="./index.html">Inicio</a>
-            <a href="./pages/imc.html">Calculá tu IMC</a>
-            <a href="./pages/alumnos.html">Unite a la comunidad Vitality Fitness</a>
+            <a href="../index.html">Inicio</a>
+            <a href="../pages/imc.html">Calculá tu IMC</a>
+            <a href="../pages/alumnos.html">Unite a la comunida Vitality Fitness</a>
             
 
 
             </div>
             
         <div>
-            <a href="https://www.facebook.com/ayesalviaprepfisica"><img src="./img/facebook (2).png"alt="icono facebook"></a>
-            <a href="https://www.instagram.com/ayi_salvia/"><img src="./img/instagram (2).png" alt="icono ig"></a>
-            <a href="https://www.whatsapp.com/?lang=es"><img src="./img/whatsapp.png" alt="icono ig"></a>
+            <a href="https://www.facebook.com/ayesalviaprepfisica"><img src="../img/facebook (2).png"alt="icono facebook"></a>
+            <a href="https://www.instagram.com/ayi_salvia/"><img src="../img/instagram (2).png" alt="icono ig"></a>
+            <a href="https://www.whatsapp.com/?lang=es"><img src="../img/whatsapp.png" alt="icono ig"></a>
         </div>
         <div>
             <p>Derechos de autor.Ayelen Salvia </p>
@@ -91,5 +77,5 @@
 
 
 </body>
-<script src="./main.js"></script>
+<script src="../main.js"></script>
 </html>
