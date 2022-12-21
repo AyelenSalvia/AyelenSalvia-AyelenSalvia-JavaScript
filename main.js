@@ -2,7 +2,6 @@
 
 let divRespuesta = document.querySelector("#respuesta");
 
-
 function loguear (){
 
     let usuario =document.getElementById("usuarioNuevo").value;  
@@ -20,7 +19,6 @@ function loguear (){
         alert(" El usuario o la clave es incorecto, volvé a intentarlo")
     }
 }
-
 
 
 //CALCULADORA IMC
@@ -58,6 +56,7 @@ divResultadoImc.innerHTML = resultado +" "+  "//<a href='../pages/alumnos.html'>
 
 
 
+
 //AGREGAR ALUMNOS
 
 const formulario = document.querySelector("#formulario");
@@ -73,16 +72,8 @@ class Alumno {
 
 let divAlumnos = document.querySelector("#alumnos");
 
-const listaAlumnos = [
-    {nombre: `Ana María`, imc: 30, horasSueno:8, tiempoActFisica: 1},
-    {nombre: `Uriel`, imc: 23, horasSueno:7, tiempoActFisica: 3},
-    {nombre: `Nahuel`, imc: 21.5, horasSueno:8, tiempoActFisica: 2},
-    {nombre: `Alexis`, imc: 31, horasSueno:6, tiempoActFisica: 2},
-    {nombre: `Dario`, imc: 24, horasSueno:8, tiempoActFisica: 4},
-    {nombre: `Liliana`, imc: 22, horasSueno:7, tiempoActFisica: 1},
-    {nombre: `Cecilia`, imc: 32, horasSueno:8, tiempoActFisica: 2},
-    {nombre: `Jacinto`, imc: 23.5, horasSueno:6, tiempoActFisica: 3},
-];
+const listaAlumnos = JSON.parse(localStorage.getItem("alumnos")) || [];
+
 
 
 
@@ -96,10 +87,8 @@ const agregarAlumno=()=> {
 
     let alumnoNuevo = new Alumno (nombre, imc, horasSueno, tiempoActFisica);
 
-
-let listaStorage = JSON.parse(localStorage.getItem("alumnos"));
-listaStorage.push(alumnoNuevo);
-localStorage.setItem("alumnos", JSON.stringify (listaStorage));
+listaAlumnos.push(alumnoNuevo);
+localStorage.setItem("alumnos", JSON.stringify (listaAlumnos));
 
 return listaAlumnos;
 
@@ -107,7 +96,7 @@ return listaAlumnos;
 
 formulario.onsubmit = (e)=> { 
     e.preventDefault();
-    agregarAlumno()
+    agregarAlumno();
 }
 
 
