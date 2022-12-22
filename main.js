@@ -85,7 +85,7 @@ const listaAlumnos = JSON.parse(localStorage.getItem("alumnos")) || [];
 
 const agregarAlumno=()=> {
     let nombre= document.getElementById("nombre").value;
-    let imc = parseInt( document.getElementById("imcCalculado").value);
+    let imc = parseFloat( document.getElementById("imcCalculado").value);
     let horasSueno = parseInt( document.getElementById("sueno").value);
     let tiempoActFisica= parseInt( document.getElementById("actividadF").value);
 
