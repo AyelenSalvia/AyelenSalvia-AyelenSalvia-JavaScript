@@ -2,6 +2,7 @@
 
 let divRespuesta = document.querySelector("#respuesta");
 
+
 function loguear (){
 
     let usuario =document.getElementById("usuarioNuevo").value;  
@@ -21,10 +22,13 @@ function loguear (){
 }
 
 
+
 //CALCULADORA IMC
-const imcForm = document.querySelector("#imcForm")
+const imcForm = document.querySelector("#imcForm");
 
 let divResultadoImc = document.querySelector("#resultadoImc");
+
+
 
 function calcularImc () {
 let peso = document.getElementById("peso").value;
@@ -100,6 +104,8 @@ formulario.onsubmit = (e)=> {
 }
 
 
+const pintar = document.getElementById("pintar")
+
 
 const mostrarAlumnos = ()=> {
     const alumnosGuardados = JSON.parse(localStorage.getItem("alumnos"));
@@ -116,7 +122,7 @@ const mostrarAlumnos = ()=> {
     })
 }
 
-
+pintar.addEventListener("click", mostrarAlumnos);
 
 
 
