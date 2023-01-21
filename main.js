@@ -1,4 +1,12 @@
-// USUARIO Y CLAVE
+
+//LIBRERIA LUXON MUESTRA FECHA,HORA ACTUAL Y LUGAR
+let divHora = document.querySelector(".hora");
+const DateTime = luxon.DateTime;
+const now = DateTime.now();
+divHora.innerHTML = now.toLocaleString(DateTime.DATETIME_HUGE);
+
+
+// USUARIO Y CLAVE, colocar cualquier ususario y clave(númerica)
 
 let divRespuesta = document.querySelector("#respuesta");
 
@@ -10,18 +18,11 @@ function loguear (){
     let confirmaUsuario = document.getElementById("usuario").value;
     let confirmaPass = parseInt( document.getElementById("contrasena").value);
 
-    if (usuario == confirmaUsuario && pass == confirmaPass) {
-        divRespuesta.innerHTML = "Felicitaciones, ya podes calcular tu Índice de Masa Corporal <a href='./pages/imc.html'>Clickea acá</a>";
-
-
-            
-            }
-    else {
-        alert(" El usuario o la clave es incorecto, volvé a intentarlo")
-    }
+    usuario == confirmaUsuario && pass == confirmaPass ? 
+        divRespuesta.innerHTML = "Felicitaciones, ya podes calcular tu Índice de Masa Corporal <a href='./pages/imc.html'>Clickea acá</a>":alert("El usuario o clave es incorrecto")
+    
+    
 }
-
-
 
 //CALCULADORA IMC
 const imcForm = document.querySelector("#imcForm");
@@ -58,10 +59,7 @@ divResultadoImc.innerHTML = resultado +" "+  "//<a href='../pages/alumnos.html'>
 }
 
 
-
-
-
-//AGREGAR ALUMNOS
+// AGREGAR ALUMNOS 
 
 const formulario = document.querySelector("#formulario");
 class Alumno {
@@ -77,8 +75,6 @@ class Alumno {
 let divAlumnos = document.querySelector("#alumnos");
 
 const listaAlumnos = JSON.parse(localStorage.getItem("alumnos")) || [];
-
-
 
 
 
@@ -124,5 +120,30 @@ const mostrarAlumnos = ()=> {
 
 pintar.addEventListener("click", mostrarAlumnos);
 
+
+//MOSTRAR EJERCICIOS Y MÚSCULOS QUE EJRCITAN CADA UNO 
+
+const boton = document.getElementById("btnEj");
+const contenedor = document.querySelector("#ejercicios");
+
+const obtenerEj = ()=> {
+    fetch("./ejercicios.json")
+        .then(response => response.json())
+        .then(resultado => {
+            resultado.forEach(item => {
+                contenedor.innerHTML += `
+                    <div>
+                        <h3>Ejercicio:${item.ej}</h3>
+                        <p>Músculo principal: ${item.musc}</p>
+                        
+                    </div>
+                `
+            })
+        })
+}
+
+boton.onclick = () => {
+    obtenerEj();
+}
 
 
