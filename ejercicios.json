@@ -1,10 +1,10 @@
 [
-    {"ej": "Sentadilla","musc":"cuadriceps"},
-    {"ej": "Estocadas", "musc":"cuadriceps"},
-    {"ej": "Puente glúteo", "musc":"gluteos"},
-    {"ej": "Clamp shell", "musc":"gluteo medio"},
-    {"ej": "Vuelos con mancuernas", "musc":"deltoides"},
-    {"ej": "Fondos en banco", "musc":"triceps"},
-    {"ej": "Remos con bandas", "musc":"dorsal ancho"},
-    {"ej": "Sit up", "musc":"abdominales"}
+    {"ej": "Sentadilla","musc":"Cuadriceps"},
+    {"ej": "Estocadas", "musc":"Cuadriceps"},
+    {"ej": "Puente glúteo", "musc":"Glúteos"},
+    {"ej": "Clamp shell", "musc":"Glúteo medio"},
+    {"ej": "Vuelos con mancuernas", "musc":"Deltoides"},
+    {"ej": "Fondos en banco", "musc":"Triceps"},
+    {"ej": "Remos con bandas", "musc":"Dorsal ancho"},
+    {"ej": "Sit up", "musc":"Abdominales"}
 ]

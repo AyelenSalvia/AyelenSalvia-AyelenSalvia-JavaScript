@@ -127,7 +127,7 @@ const boton = document.getElementById("btnEj");
 const contenedor = document.querySelector("#ejercicios");
 
 const obtenerEj = ()=> {
-    fetch("./ejercicios.json")
+    fetch("../ejercicios.json")
         .then(response => response.json())
         .then(resultado => {
             resultado.forEach(item => {

@@ -133,11 +133,20 @@ textarea {
     align-items: center;
 }
 
-.ejercicios p {
-    text-align: center;
+.ejercicios h3 {
+    text-align: left;
     color: rgb(17, 17, 17);
     font-family: 'Noto Sans Avestan', sans-serif;
     font-size: 20px;
+    margin: 15px;
+}
+
+.ejercicios p {
+    
+    text-align: left;
+    color: rgb(17, 17, 17);
+    font-family: 'Noto Sans Avestan', sans-serif;
+    font-size: 17px;
     margin: 15px;
 
 }
